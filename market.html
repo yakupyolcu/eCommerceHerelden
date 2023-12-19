@@ -1,0 +1,593 @@
+<html lang="tr">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Market - Herelden</title>
+
+      <!-- Navbar -->
+      <link rel="stylesheet" href="css/navbar.css">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+      
+      <!-- Market Main Panel -->
+      <link rel="stylesheet" href="css/marketMainPanel.css">
+      <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css'>
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'><link rel="stylesheet" href="css/marketMainPanel.css">
+
+      <!-- Filter -->
+      <link rel="stylesheet" href="css/marketFilter.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+      <script src="document.querySelector('#dfpTargeting')"></script>
+
+			<style>body {background: #ecefef;}</style>
+    </head>
+<body>
+
+<nav class="mainNavbar">
+    <div class="menu">
+        <!-- Logo ve Arama Kısmı -->
+        <div class="logoVeArama">
+            <div class="logo"><a href="index.html"><img class="logo" src="images/hereldenLogo.png" alt="logoHerelden"></a></div>
+            <div class="maddeArama">
+                <input class="textbox" type="text" placeholder="Kelime, ilan ismi ile ara">
+            </div>
+            <div class="maddeAramaDet"><a href="#">Filtrele</a></div>
+        </div>
+        <!-- Options line -->
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <img class="optionsLine" src="images/optionsLine2.png" alt="optionsLineIcon">
+        </label>
+        <!-- Tablet ve Telefon Kısmı için seçenekler -->
+        <ul class="secenekler">
+            <li class="madde"><a href="market.html">Market</a></li>
+            <li class="madde"><a href="#2el">2.El</a></li>
+            <li class="madde"><a href="#fav">Favorilerim</a></li>
+        </ul>
+        <!-- Desktop için seçenekler -->
+        <ul class="secenekler2">
+            <li class="madde"><a href="market.html">Market</a></li>
+            <li class="madde"><a href="#2el">2.El</a></li>
+            <li class="madde"><a href="#fav">Favorilerim</a></li>
+        </ul>
+        <!-- Butonlar -->
+        <div class="navbarBtn">
+            <div class="maddeButton"><a href="#">Hesabım</a></div>
+            <div class="maddeButtonSecondary"><a href="#">Sepetim</a></div>
+        </div>
+
+
+    </div>
+</nav>
+
+
+
+  <!-- Filtrele -->
+    <div class="filterMarket">
+        <aside class="col">
+            <div class="card">
+              <article class="card-group-item">
+                <header class="card-header">
+                  <h6 class="title">Kategori</h6>
+                </header>
+                <div class="filter-content">
+                  <div class="card-body">
+                  <form>
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <span class="form-check-label">
+                        Gardıroplar
+                      </span>
+                    </label> <!-- form-check.// -->
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <span class="form-check-label">
+                        Çalışma Masaları
+                      </span>
+                    </label>  <!-- form-check.// -->
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <span class="form-check-label">
+                        Dolaplar
+                      </span>
+                    </label>  <!-- form-check.// -->
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <span class="form-check-label">
+                        Tv Ünite ve Sehpaları
+                      </span>
+                    </label>  <!-- form-check.// -->
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <span class="form-check-label">
+                        Çocuk Masa ve Sandalyesi
+                      </span>
+                    </label>  <!-- form-check.// -->
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <span class="form-check-label">
+                        Portmantolar
+                      </span>
+                    </label>  <!-- form-check.// -->
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <span class="form-check-label">
+                        Ayakkabılıklar
+                      </span>
+                    </label>  <!-- form-check.// -->
+                  </form>
+            
+                  </div> <!-- card-body.// -->
+                </div>
+              </article> <!-- card-group-item.// -->
+
+              <article class="card-group-item">
+                
+                <header class="card-header">
+                  <h6 class="title">Marka</h6>
+                </header>
+                <div class="filter-content">
+                  <div class="card-body">
+                  <label class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <span class="form-check-label">
+                      Vivense
+                    </span>
+                  </label>
+                  <label class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <span class="form-check-label">
+                      Koçtaş
+                    </span>
+                  </label>
+                  <label class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <span class="form-check-label">
+                      Bellona
+                    </span>
+                  </label>
+                  </div> <!-- card-body.// -->
+                </div>
+              </article> <!-- card-group-item.// -->
+            
+        </aside> <!-- col.// -->
+
+        <aside class="col">
+          <p>  </p>
+            <div class="card">
+              <article class="card-group-item">
+                <header class="card-header"><h6 class="title">Enler</h6></header>
+                <div class="filter-content">
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item">En Çok Tıklanan Ürünler <span class="float-right badge badge-light round">142</span> </a>
+                    <a href="#" class="list-group-item">Son Zamanlarda Tercih Edilenler <span class="float-right badge badge-light round">45</span>  </a>
+                    <a href="#" class="list-group-item">En İyi Yorum Alanlar<span class="float-right badge badge-light round">15</span>  </a>
+                  </div>  <!-- list-group .// -->
+                </div>
+              </article> <!-- card-group-item.// -->
+              <article class="card-group-item">
+                
+              </article> <!-- card-group-item.// -->
+            </div> <!-- card.// -->
+        </aside> <!-- col.// -->
+          <p>  </p>
+        <aside class="col">
+            <div class="card">
+              <article class="card-group-item">
+                <header class="card-header">
+                  <h6 class="title">Fiyat</h6>
+                </header>
+                <div class="filter-content">
+                  <div class="card-body">
+                  <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label>Min Fiyat</label>
+                    <input type="number" class="form-control" id="inputEmail4" placeholder="₺0">
+                  </div>
+                  <div class="form-group col-md-6 text-right">
+                    <label>Max Fiyat</label>
+                    <input type="number" class="form-control" placeholder="₺1.000">
+                  </div>
+                  </div>
+                  </div> <!-- card-body.// -->
+                </div>
+              </article> <!-- card-group-item.// -->
+            </div> <!-- card.// -->
+            
+            <div class="sticky-search-button with-disclaimer-bar fixed">
+                <button class="btn btn-block search-submit">Ara</button>
+            </div>
+           
+        </aside>
+        
+      
+    </div>
+
+  <!-- Market Main Panel -->
+    <div class="mainPanelMarket">
+        <section class="section-products">
+          <div class="container">
+              <div class="row justify-content-center text-center">
+                  <div class="col-md-8 col-lg-6">
+
+                  </div>
+              </div>
+              <div class="row">
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                      <div id="product-1" class="single-product">
+                          <div class="part-1">
+                              <ul>
+                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                              </ul>
+                          </div>
+                          <div class="part-2">
+                              <h3 class="product-title">Here Product Title</h3>
+                              <h4 class="product-old-price">$79.99</h4>
+                              <h4 class="product-price">$49.99</h4>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                      <div id="product-2" class="single-product">
+                          <div class="part-1">
+                              <span class="discount">15% off</span>
+                              <ul>
+                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                              </ul>
+                          </div>
+                          <div class="part-2">
+                              <h3 class="product-title">Here Product Title</h3>
+                              <h4 class="product-price">$49.99</h4>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                      <div id="product-3" class="single-product">
+                          <div class="part-1">
+                              <ul>
+                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                              </ul>
+                          </div>
+                          <div class="part-2">
+                              <h3 class="product-title">Here Product Title</h3>
+                              <h4 class="product-old-price">$79.99</h4>
+                              <h4 class="product-price">$49.99</h4>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                      <div id="product-4" class="single-product">
+                          <div class="part-1">
+                              <span class="new">new</span>
+                              <ul>
+                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                              </ul>
+                          </div>
+                          <div class="part-2">
+                              <h3 class="product-title">Here Product Title</h3>
+                              <h4 class="product-price">$49.99</h4>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                      <div id="product-1" class="single-product">
+                          <div class="part-1">
+                              <ul>
+                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                              </ul>
+                          </div>
+                          <div class="part-2">
+                              <h3 class="product-title">Here Product Title</h3>
+                              <h4 class="product-old-price">$79.99</h4>
+                              <h4 class="product-price">$49.99</h4>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                      <div id="product-2" class="single-product">
+                          <div class="part-1">
+                              <span class="discount">15% off</span>
+                              <ul>
+                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                              </ul>
+                          </div>
+                          <div class="part-2">
+                              <h3 class="product-title">Here Product Title</h3>
+                              <h4 class="product-price">$49.99</h4>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                      <div id="product-3" class="single-product">
+                          <div class="part-1">
+                              <ul>
+                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                              </ul>
+                          </div>
+                          <div class="part-2">
+                              <h3 class="product-title">Here Product Title</h3>
+                              <h4 class="product-old-price">$79.99</h4>
+                              <h4 class="product-price">$49.99</h4>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                      <div id="product-4" class="single-product">
+                          <div class="part-1">
+                              <span class="new">new</span>
+                              <ul>
+                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                              </ul>
+                          </div>
+                          <div class="part-2">
+                              <h3 class="product-title">Here Product Title</h3>
+                              <h4 class="product-price">$49.99</h4>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                                      <div id="product-1" class="single-product">
+                                          <div class="part-1">
+                                              <ul>
+                                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                                              </ul>
+                                          </div>
+                                          <div class="part-2">
+                                              <h3 class="product-title">Here Product Title</h3>
+                                              <h4 class="product-old-price">$79.99</h4>
+                                              <h4 class="product-price">$49.99</h4>
+                                          </div>
+                                      </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                                      <div id="product-2" class="single-product">
+                                          <div class="part-1">
+                                              <span class="discount">15% off</span>
+                                              <ul>
+                                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                                              </ul>
+                                          </div>
+                                          <div class="part-2">
+                                              <h3 class="product-title">Here Product Title</h3>
+                                              <h4 class="product-price">$49.99</h4>
+                                          </div>
+                                      </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                                      <div id="product-3" class="single-product">
+                                          <div class="part-1">
+                                              <ul>
+                                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                                              </ul>
+                                          </div>
+                                          <div class="part-2">
+                                              <h3 class="product-title">Here Product Title</h3>
+                                              <h4 class="product-old-price">$79.99</h4>
+                                              <h4 class="product-price">$49.99</h4>
+                                          </div>
+                                      </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                                      <div id="product-4" class="single-product">
+                                          <div class="part-1">
+                                              <span class="new">new</span>
+                                              <ul>
+                                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                                              </ul>
+                                          </div>
+                                          <div class="part-2">
+                                              <h3 class="product-title">Here Product Title</h3>
+                                              <h4 class="product-price">$49.99</h4>
+                                          </div>
+                                      </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div id="product-1" class="single-product">
+                        <div class="part-1">
+                            <ul>
+                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="part-2">
+                            <h3 class="product-title">Here Product Title</h3>
+                            <h4 class="product-old-price">$79.99</h4>
+                            <h4 class="product-price">$49.99</h4>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div id="product-2" class="single-product">
+                        <div class="part-1">
+                            <span class="discount">15% off</span>
+                            <ul>
+                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="part-2">
+                            <h3 class="product-title">Here Product Title</h3>
+                            <h4 class="product-price">$49.99</h4>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div id="product-3" class="single-product">
+                        <div class="part-1">
+                            <ul>
+                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="part-2">
+                            <h3 class="product-title">Here Product Title</h3>
+                            <h4 class="product-old-price">$79.99</h4>
+                            <h4 class="product-price">$49.99</h4>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div id="product-4" class="single-product">
+                        <div class="part-1">
+                            <span class="new">new</span>
+                            <ul>
+                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="part-2">
+                            <h3 class="product-title">Here Product Title</h3>
+                            <h4 class="product-price">$49.99</h4>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div id="product-1" class="single-product">
+                        <div class="part-1">
+                            <ul>
+                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="part-2">
+                            <h3 class="product-title">Here Product Title</h3>
+                            <h4 class="product-old-price">$79.99</h4>
+                            <h4 class="product-price">$49.99</h4>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div id="product-2" class="single-product">
+                        <div class="part-1">
+                            <span class="discount">15% off</span>
+                            <ul>
+                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="part-2">
+                            <h3 class="product-title">Here Product Title</h3>
+                            <h4 class="product-price">$49.99</h4>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div id="product-3" class="single-product">
+                        <div class="part-1">
+                            <ul>
+                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="part-2">
+                            <h3 class="product-title">Here Product Title</h3>
+                            <h4 class="product-old-price">$79.99</h4>
+                            <h4 class="product-price">$49.99</h4>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Single Product -->
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div id="product-4" class="single-product">
+                        <div class="part-1">
+                            <span class="new">new</span>
+                            <ul>
+                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                                <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="part-2">
+                            <h3 class="product-title">Here Product Title</h3>
+                            <h4 class="product-price">$49.99</h4>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+</html>
