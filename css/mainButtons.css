@@ -1,0 +1,129 @@
+.mainButtons{
+  display: flexbox;
+}
+
+.mainbutton1, .mainbutton2, .mainbutton3, .mainbutton4{
+  margin: 75px 1px 0 1px;
+  height: 70px;
+  border-radius: 5px;
+	font-size: 17px;
+	text-align: center;
+	text-transform: uppercase; 
+}
+
+.mainbutton1{
+  background-image: linear-gradient(to bottom right, #fb9701, #f4c300);  
+	font-weight: 750;
+}
+
+.mainbutton2{
+  background-image: linear-gradient(to bottom right, #0a0a0a, #2b2b2b);
+  color: #ff9901;
+  font-weight: 700;
+}
+
+.mainbutton3{
+  background-image: linear-gradient(to bottom right, #fb9701, #f4c300);  
+  font-weight: 750;
+}
+
+.mainbutton4{
+  background-image: linear-gradient(to bottom right, #0a0a0a, #2b2b2b);
+  color: #ff9901;
+  font-weight: 700;
+}
+
+.mainbutton{
+  cursor: pointer;
+}
+
+/* Mobile menu */
+   .mainButtons{
+    padding: 0;
+  }
+  .row{
+		display: flex;
+  }
+  .col{
+    flex: 0 0 50%; /* Telefon ekranlarda 2 sütun */
+		max-width: 50%;
+  }
+  .mainbutton1, .mainbutton2{
+    font-size: 13px;
+  }
+  .mainbutton1{
+    padding: 25px;
+    display: block;
+  }
+  .mainbutton2{
+    padding: 15px;
+    display: block;
+  }
+  .mainbutton3{
+    display: none;
+  }
+  .mainbutton4{
+    display: none;
+  }  
+
+/* Tablet menu */
+@media all and (min-width: 768px) {
+  .mainButtons{
+    padding: 0 20px;
+  }
+  .mainbutton1, .mainbutton2, .mainbutton3{
+    font-size: 15px;
+  }
+  .row{
+		display: flex;
+  }
+  .col{
+    flex: 0 0 33%; /* Tablet ekranlarda 3 sütun */
+		max-width: 33%;
+  }
+  .mainbutton1{
+    padding: 20px;
+    display: block;
+  }
+  .mainbutton2{
+    padding: 10px;
+    display: block;
+  }
+  .mainbutton3{
+    padding: 20px;
+    display: block;
+  }
+  .mainbutton4{
+    display: none;
+  }
+}
+
+/* Desktop menu (normalde 992px) */
+@media all and (min-width: 1500px) {
+  .mainButtons{
+    padding: 0 210px;
+  }
+  .row{
+		display: flex;
+  }
+  .col{
+    flex: 0 0 25%; /* Desktop ekranlarda 4 sütun */
+		max-width: 25%;
+  }
+  .mainbutton1{
+    padding: 20px;
+    display: block;
+  }
+  .mainbutton2{
+    padding: 10px;
+    display: block;
+  }
+  .mainbutton3{
+    padding: 20px;
+    display: block;
+  }
+  .mainbutton4{
+    padding: 20px;
+    display: block;
+  }
+}

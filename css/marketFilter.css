@@ -1,0 +1,68 @@
+.mainPanelMarket{
+  padding-top: 90px;
+  float: right;
+  width: 100%;
+  overflow: visible;
+  margin-right: -180px;
+}
+
+.filterMarket{
+  position: absolute;
+  float: left;
+  width: 28%;
+  margin-top: 100px;
+  padding-left: 200px;
+}
+
+
+.card{
+  display: block;
+}
+.col-sm-4{
+  display: block;
+}
+.sticky-search-button{
+letter-spacing: .01em;
+font-stretch: normal;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+line-height: normal;
+text-size-adjust: none;
+color: #fb9701;
+padding: 10px 0 ;
+background-color: rgba(255,255,255,0.8);
+border-radius: 5px;
+width: 304px;
+box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+margin-left: 1px;
+position: fixed;
+z-index: 5;
+bottom: 30px;
+display: block;
+}
+.search-submit{
+text-size-adjust: none;
+letter-spacing: .01em;
+padding: 9px 22px;
+font-size: 18px;
+font-weight: 900;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+border: 1px solid #0a0a0a;
+border-radius: 5px;
+color: #0a0a0a;
+background-color: #fb9701;
+background-repeat: repeat-x;
+background-image: -webkit-linear-gradient(top,#fb9701,#f4c300);
+text-shadow: 1px 1px 0 #000;
+box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1),0 2px 2px -1px rgba(0,0,0,0.15);
+line-height: 1.3em;
+outline: 0;
+padding-right: 0;
+padding-left: 0;
+box-sizing: border-box;
+width: 130px;
+display: block;
+}

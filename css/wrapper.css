@@ -1,0 +1,121 @@
+.bannerImageWrapper{
+  font-family:montserrat;
+  z-index: -1;
+  display: block;
+  padding-top: 50px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bannerImage{
+  background-image: url(images/wrapper.jpg);
+  top: 0;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  border-radius: 0 0 5px 5px;
+}
+
+.bannerAll{
+  
+  cursor: pointer;
+  display: flex;
+  top: unset;
+  transform: translate(0px, 0px);
+  padding-top: 225px;
+  padding-left: 76 ;
+}
+
+.wrapperButton2El{
+  width: 95px;
+  height: 30px;
+  color: #1b1b1b;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 2px #1b1b1b solid;
+  outline: none;
+  background: none;
+  font-weight: bolder;
+}
+
+.wrapperButtonMarket{
+  width: 95px;
+  height: 30px;
+  color: #1b1b1b;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 2px #1b1b1b solid;
+  outline: none;
+  background: none;
+  font-weight: bolder;
+  margin-left: 2px;
+}
+
+.wrapperButton2Ela a:hover{
+  background-color: #fff;
+  border: 2px #fff solid;
+}
+
+/* Mobile menu */
+.bannerImageWrapper{
+  z-index: -1;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  position: relative;
+  margin: auto;
+}
+.bannerImage{
+  width: 100%;
+  background-size: contain;
+  }
+.bannerAll{
+  display: none;
+}
+
+/* Tablet menu */
+@media screen and (min-width: 768px) {
+.bannerImageWrapper{
+    z-index: -1;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    position: relative;
+    margin: auto;
+  }
+.bannerImage{
+    width: 100%;
+    background-size: contain;
+  }
+.bannerAll{
+    display: none;
+  }
+}
+
+/* Desktop menu (normalde 992px)*/
+@media all and (min-width: 1250px) {
+  .bannerImageWrapper{
+  z-index: -1;
+  height: 370px;
+  display: flex;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  }
+  .bannerImage{
+  width: 1500px;
+  height: 370px;
+  margin: auto;
+  }
+  .bannerAll{
+    display: none;
+  }
+}
+
+@media all and (min-width: 1500px) {
+  .bannerAll{
+    display: block;
+  }
+}
