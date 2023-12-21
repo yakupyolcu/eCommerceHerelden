@@ -5,6 +5,10 @@
   overflow: visible;
   margin-right: -180px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae072b7cf82fea39e3f753c5689e74b03d16d9b5
 .filterMarket{
   position: absolute;
   float: left;
@@ -12,12 +16,18 @@
   margin-top: 100px;
   padding-left: 200px;
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ae072b7cf82fea39e3f753c5689e74b03d16d9b5
 .card{
   display: block;
 }
 .col-sm-4{
   display: block;
 }
+<<<<<<< HEAD
 /* Sehir Sec */
 ::selection{
   color: #fff;
@@ -112,6 +122,8 @@
   background: #f2f2f2;
 }
 /* Ara Butonu */
+=======
+>>>>>>> ae072b7cf82fea39e3f753c5689e74b03d16d9b5
 .sticky-search-button{
 letter-spacing: .01em;
 font-stretch: normal;
