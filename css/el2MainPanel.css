@@ -1,0 +1,26 @@
+.mainPanelEl2{
+display: block;
+padding: 100px 210px 0 550px;
+float: right;
+}
+
+.mt-50{
+  margin-top: 50px;
+}
+.mb-50{
+  margin-bottom: 50px;
+}
+
+
+.bg-teal-400 { 
+  background-color: #26a69a;
+}
+
+.mainPanelEl2 a{
+  text-decoration: none !important;
+}
+
+
+.fa {
+      color: #ffc000;
+}
