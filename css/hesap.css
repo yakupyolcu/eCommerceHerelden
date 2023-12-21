@@ -1,0 +1,122 @@
+.navbarBtn {
+  order: 4;
+  margin-top: -12px;
+  padding-right: 207px;
+}
+/* Main Section */
+.main{
+  position: relative;
+  padding: 20px 210px 0 210px;
+  width: 100%;
+}
+.main-top{
+  display: flex;
+  width: 100%;
+}
+.main-top i{
+  position: absolute;
+  right: 0;
+  margin: 10px 30px;
+  color: rgb(110, 109, 109);
+  cursor: pointer;
+}
+
+.mSaticiEkrani{
+  padding-top: 50px;
+}
+
+.saticiEkrani{
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+}
+
+.saticiEkraniImg{
+  height: 200px;
+}
+
+.mask{
+  background-color: #1b1b1b;
+  color: #000;
+  border-radius: 20px;
+}
+
+.mask .btn{
+  border-color: #fb9700;
+  color: #fb9700;
+}
+
+.btn .btn-outline-light .btn-lg{
+  float: right;
+}
+
+/* Courses */
+.main-course{
+  margin-top:20px ;
+}
+.course-box{
+  width: 100%;
+  height: 250px;
+  padding: 10px 10px 30px 10px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.course-box ul{
+  list-style: none;
+  display: flex;
+}
+.course-box ul li{
+  margin: 10px;
+  color: gray;
+  cursor: pointer;
+}
+.course-box ul .active{
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+.course-box .course{
+  display: flex;
+}
+.box{
+  width: 33%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background: rgb(235, 233, 233);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.box p{
+  font-size: 15px;
+  margin-top: 5px;
+}
+.box button{
+  background: #fb9700;
+  color: #1b1b1b;
+  border-color: #1b1b1b;
+  padding: 7px 10px;
+  border-radius: 10px;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+.box button:hover{
+  background: #1b1b1b;
+  color: #fb9700;
+  border-color: #fb9700;
+}
+.box i{
+  font-size: 7rem;
+  float: right;
+  margin: -20px 20px 20px 0;
+}
+.html{
+  color: rgb(25, 94, 54);
+}
+.css{
+  color: rgb(104, 179, 35);
+}
+.js{
+  color: rgb(28, 98, 179);
+}

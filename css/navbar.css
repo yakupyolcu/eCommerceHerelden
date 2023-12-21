@@ -12,7 +12,7 @@ h2 {
 	/* text-transform: uppercase; */
 	position: relative;
 	margin: 0px 0 60px;
-	padding-left: 30px;
+	padding-left: 15px;
 }
 body{
   overflow-y: auto;
@@ -58,11 +58,7 @@ ul{
   position: relative;
   cursor: auto;
   height: 30px;
-<<<<<<< HEAD
   width: 300px;
-=======
-  width: 500px;
->>>>>>> ae072b7cf82fea39e3f753c5689e74b03d16d9b5
   border-style: solid;
   border-width: 2px;
   border-color: #fff;
