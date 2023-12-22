@@ -1,0 +1,127 @@
+/* Courses */
+h2 {
+  color: #fb9700!important;
+}
+.main-course{
+  display: block;
+  padding: 90px 210px 0 210px;
+}
+.course-box{
+  width: 100%;
+  height: 250px;
+  padding: 10px 10px 30px 10px;
+  margin-top: 20px;
+  background: #fb9700;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.course-box ul{
+  list-style: none;
+  display: flex;
+}
+.course-box ul li{
+  margin: 10px;
+  color: gray;
+  cursor: pointer;
+}
+.course-box ul .active{
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+.course-box .course{
+  display: flex;
+}
+
+.course .btn{
+  width: 50%;
+  height: 170px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background: rgb(235, 233, 233);
+  color: #1b1b1b;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+}
+.course .btn:hover{
+  background: #1b1b1b;
+  color: #fb9700;
+  border-color: #fb9700;
+}
+.course p{
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+
+.order-container {
+  padding: 30px 210px 0 210px;
+}
+
+.orderStatus {
+  display: flex;
+  width: 100%;
+  padding: 10px 10px 30px 10px;
+  margin-top: 20px;
+  background: #fb9700;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.order-history, .order-status {
+  margin-top: 20px;
+  height: 290px;
+  width: 50%;
+  padding: 25px;
+  margin: 10px;
+  border-radius: 10px;
+  background: rgb(235, 233, 233);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  color: #1b1b1b;
+}
+
+.orderList{
+  height: 220px;
+  overflow-y: scroll;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  border-radius: 10px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.order-status .btn {
+  margin-top: 5px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.order-status .btn:hover{
+  background: #1b1b1b;
+  color: #fb9700;
+  border-color: #fb9700;
+}

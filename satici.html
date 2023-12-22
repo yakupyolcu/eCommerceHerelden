@@ -7,9 +7,9 @@
       <link rel="stylesheet" href="css/navbar.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-			<link rel="stylesheet" href="css/hesap.css">
-				
-			<style>body {background: #ecefef;}</style>
+			<link rel="stylesheet" href="css/satici.css">
+      <link rel="stylesheet" href="css/saticiUrunler.css">
+			<style>body {background: #111;}</style>
     </head>
 <body>
 
@@ -45,8 +45,289 @@
             <div class="maddeButton"><a href="hesap.html">Hesabım</a></div>
             <div class="maddeButtonSecondary"><a href="#">Sepetim</a></div>
         </div>
+
+
     </div>
-</nav>
+  </nav>
+
+<section class="main-course">
+  <h2>Ürün Yönetimi</h2>
+  <div class="course-box">
+    <div class="course">
+      <button class="btn btn-dark">
+        <h3>Ürün Ekle</h3>
+        <p>Ürününüzün adı, kategori, açıklama, fiyat, stok miktarı gibi temel bilgileri buradan ekleyebilirsiniz.</p>
+        <i class="fab fa-css3-alt css"></i>
+    </button>
+
+      <button class="btn btn-dark">
+        <h3>Ürün Düzenle veya Sil</h3>
+        <p>Mevcut ürünlerinizi güncelleme imkanı, fiyat değişiklikleri, açıklama güncellemeleri gibi değişiklikleri yapabilirve istediğiniz ürünleri panel üzerinden kaldırabilirsiniz..</p>
+        <i class="fab fa-js-square js"></i>
+    </button>
+    
+    </div>
+  </div>
+</section>
+
+<section class="order-container">
+  <h2>Satış Geçmişi ve Sipariş Durumları</h2>
+<div class="orderStatus">
+  <!-- Sipariş Geçmişi -->
+  <section class="order-history">
+      <h3>Sipariş Geçmişi</h3>
+    <div class="orderList">
+      <ul>
+          <li>
+              <span>Sipariş No: 123456</span>
+              <span>Tarih: 2023-01-01</span>
+              <span>Durum: Kargoya Verildi</span>
+          </li>
+          <li>
+            <span>Sipariş No: 123456</span>
+            <span>Tarih: 2023-01-01</span>
+            <span>Durum: Kargoya Verildi</span>
+          </li>
+          <li>
+          <span>Sipariş No: 123456</span>
+          <span>Tarih: 2023-01-01</span>
+          <span>Durum: Kargoya Verildi</span>
+          </li>
+          <li>
+        <span>Sipariş No: 123456</span>
+        <span>Tarih: 2023-01-01</span>
+        <span>Durum: Kargoya Verildi</span>
+          </li>
+          <li>
+          <span>Sipariş No: 123456</span>
+          <span>Tarih: 2023-01-01</span>
+          <span>Durum: Kargoya Verildi</span>
+          </li>
+          <li>
+            <span>Sipariş No: 123456</span>
+            <span>Tarih: 2023-01-01</span>
+            <span>Durum: Kargoya Verildi</span>
+          </li>
+          <!-- Diğer siparişler buraya eklenebilir -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- Sipariş Durumları -->
+  <section class="order-status">
+      <h3>Sipariş Durumları</h3>
+      <form>
+          <label for="orderNumber">Sipariş Numarası:</label>
+          <input type="text" id="orderNumber" name="orderNumber" required>
+          <select name="status" id="status" required>
+              <option value="Hazırlanıyor">Hazırlanıyor</option>
+              <option value="Kargoya Verildi">Kargoya Verildi</option>
+              <option value="Teslim Edildi">Teslim Edildi</option>
+          </select>
+          <button class="btn btn-dark" type="submit">Durumu Güncelle</button>
+      </form>
+  </section>
+</div>
+</section>
+
+
+<section class="saticiUrunler">
+  <h2>Stoktaki Ürünler</h2>
+<div class="mainPanelSatici">
+            
+  <div class="row">
+     <div class="col">
+      
+        <div class="card card-body">
+                      <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                          <div class="mr-2 mb-3 mb-lg-0">
+                              
+                                  <img src="https://i.imgur.com/5Aqgz7o.jpg" width="150" height="150" alt="">
+                             
+                          </div>
+
+                          <div class="media-body">
+                              <h6 class="media-title font-weight-semibold">
+                                  <a href="#" data-abc="true">Kitaplık Dolabı</a>
+                              </h6>
+
+                              <ul class="list-inline list-inline-dotted mb-3 mb-lg-2">
+                                  <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Sakarya, Serdivan</a></li>
+                                  <!-- <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Mobiles</a></li> -->
+                              </ul>
+
+                              <p class="mb-3">Nakliye dahil. Ürün yeni gibi tertemiz, hiç bir deformesi yoktur. Çok az zaman kullanıldı. Tasarımı oldukça şık, çalışma masası ile takım isterseniz o şekilde de alabilirsiniz.</p>
+
+                              <ul class="list-inline list-inline-dotted mb-0">
+                                  <li class="list-inline-item"><a href="#" data-abc="true">Dolaplar</a> kategorisinden</li>
+                              </ul>
+                          </div>
+
+                          <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
+                              <h3 class="mb-0 font-weight-semibold">₺1000</h3>
+
+                              <div>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+
+                              </div>
+
+                              <div class="text-muted">20 Aralık 2023</div>
+
+                              <div class="buttons">
+                              <button type="button" class="buttonUrunDuzenle btn-dark">Düzenle</button>
+                              <button type="button" class="buttonUrunSil btn-dark">Sil</button>
+                              </div>
+                          </div>
+                      </div>
+          </div>
+
+        <div class="card card-body mt-3">
+                      <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                          <div class="mr-2 mb-3 mb-lg-0">
+                              
+                                  <img src="https://i.imgur.com/Aj0L4Wa.jpg" width="150" height="150" alt="">
+                             
+                          </div>
+
+                          <div class="media-body">
+                              <h6 class="media-title font-weight-semibold">
+                                  <a href="#" data-abc="true">Ranza</a>
+                              </h6>
+
+                              <ul class="list-inline list-inline-dotted mb-3 mb-lg-2">
+                                  <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Sakarya, Serdivan</a></li>
+                                  <!-- <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Mobiles</a></li> -->
+                              </ul>
+
+                              <p class="mb-3">256 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 15MP Front Camera A12 Bionic Chip Processor | Gorilla Glass with high quality display </p>
+
+                              <ul class="list-inline list-inline-dotted mb-0">
+                                  <li class="list-inline-item"><a href="#" data-abc="true">Dolaplar</a> kategorisinden</li>
+                              </ul>
+                          </div>
+
+                          <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
+                              <h3 class="mb-0 font-weight-semibold">$612.99</h3>
+
+                              <div>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+
+                              </div>
+
+                              <div class="text-muted">2349 reviews</div>
+
+                              <div class="buttons">
+                                <button type="button" class="buttonUrunDuzenle btn-dark">Düzenle</button>
+                                <button type="button" class="buttonUrunSil btn-dark">Sil</button>
+                                </div>
+                          </div>
+                      </div>
+          </div>    
+
+        <div class="card card-body mt-3">
+                      <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                          <div class="mr-2 mb-3 mb-lg-0">
+                              
+                                  <img src="https://i.imgur.com/5Aqgz7o.jpg" width="150" height="150" alt="">
+                             
+                          </div>
+
+                          <div class="media-body">
+                              <h6 class="media-title font-weight-semibold">
+                                  <a href="#" data-abc="true">Çalışma Masası</a>
+                              </h6>
+
+                              <ul class="list-inline list-inline-dotted mb-3 mb-lg-2">
+                                  <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Sakarya, Serdivan</a></li>
+                                  <!-- <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Mobiles</a></li> -->
+                              </ul>
+
+                              <p class="mb-3">128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor | Gorilla Glass with high quality display </p>
+
+                              <ul class="list-inline list-inline-dotted mb-0">
+                                  <li class="list-inline-item"><a href="#" data-abc="true">Dolaplar</a> kategorisinden</li>
+                              </ul>
+                          </div>
+
+                          <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
+                              <h3 class="mb-0 font-weight-semibold">$459.99</h3>
+
+                              <div>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+
+                              </div>
+
+                              <div class="text-muted">1985 reviews</div>
+
+                              <div class="buttons">
+                                <button type="button" class="buttonUrunDuzenle btn-dark">Düzenle</button>
+                                <button type="button" class="buttonUrunSil btn-dark">Sil</button>
+                                </div>
+                          </div>
+                      </div>
+          </div>
+
+        <div class="card card-body mt-3">
+                      <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                          <div class="mr-2 mb-3 mb-lg-0">
+                              
+                                  <img src="https://i.imgur.com/Aj0L4Wa.jpg" width="150" height="150" alt="">
+                             
+                          </div>
+
+                          <div class="media-body">
+                              <h6 class="media-title font-weight-semibold">
+                                  <a href="#" data-abc="true">Halı</a>
+                              </h6>
+
+                              <ul class="list-inline list-inline-dotted mb-3 mb-lg-2">
+                                  <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Sakarya, Serdivan</a></li>
+                                  <!-- <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Mobiles</a></li> -->
+                              </ul>
+
+                              <p class="mb-3">256 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 15MP Front Camera A12 Bionic Chip Processor | Gorilla Glass with high quality display </p>
+
+                              <ul class="list-inline list-inline-dotted mb-0">
+                                  <li class="list-inline-item"><a href="#" data-abc="true">Dolaplar</a> kategorisinden</li>
+                              </ul>
+                          </div>
+
+                          <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
+                              <h3 class="mb-0 font-weight-semibold">$612.99</h3>
+
+                              <div>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+
+                              </div>
+
+                              <div class="text-muted">2349 reviews</div>
+
+                              <div class="buttons">
+                                <button type="button" class="buttonUrunDuzenle btn-dark">Düzenle</button>
+                                <button type="button" class="buttonUrunSil btn-dark">Sil</button>
+                                </div>
+                          </div>
+                      </div>
+          </div> 
+                                 
+     </div>                     
+  </div>
+</div>
+</section>
 
 
 
@@ -55,19 +336,5 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 </body>
 </html>

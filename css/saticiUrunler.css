@@ -1,0 +1,56 @@
+.saticiUrunler{
+display: block;
+padding: 30px 210px 0 210px;
+}
+
+.mainPanelSatici{
+  margin-top: 20px;  
+  display: flex;
+  width: 100%;
+  height: 450px;
+  padding: 20px;
+  background: #fb9700;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.mainPanelSatici .row{
+  overflow-y: scroll;
+}
+.mainPanelSatici .buttonUrunDuzenle, .buttonUrunSil{
+  display: block;
+  width: 100px;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.buttonUrunSil{
+  background-color: #fb9700;
+  color: #1b1b1b;
+  font-weight: 700;
+}
+
+.card{
+background: rgb(235, 233, 233);
+}
+
+.mt-50{
+  margin-top: 50px;
+}
+.mb-50{
+  margin-bottom: 50px;
+}
+
+.bg-teal-400 { 
+  background-color: #26a69a;
+}
+
+.mainPanelEl2 a{
+  text-decoration: none !important;
+}
+
+
+.fa {
+      color: #ffc000;
+}
