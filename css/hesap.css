@@ -6,7 +6,7 @@
 /* Main Section */
 .main{
   position: relative;
-  padding: 20px 210px 0 210px;
+  padding: 20px 190px 0 190px;
   width: 100%;
 }
 .main-top{
@@ -21,18 +21,16 @@
   cursor: pointer;
 }
 
-.mSaticiEkrani{
-  padding-top: 50px;
-}
-
 .saticiEkrani{
   width: 100%;
   display: flex;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .saticiEkraniImg{
   height: 200px;
+  
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
 
 .mask{
@@ -53,6 +51,7 @@
 /* Courses */
 .main-course{
   margin-top:20px ;
+  padding: 0 15px 0 15px;
 }
 .course-box{
   width: 100%;
@@ -111,12 +110,12 @@
   float: right;
   margin: -20px 20px 20px 0;
 }
-.html{
-  color: rgb(25, 94, 54);
-}
-.css{
-  color: rgb(104, 179, 35);
-}
-.js{
-  color: rgb(28, 98, 179);
+
+iframe{
+  width: 100%; /* 100 viewport height */
+  height: 100vh;
+  border: none; /* çerçeve olmadan */
+  overflow: visible;
+  float: left;
+  display: flex;
 }

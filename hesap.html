@@ -7,7 +7,8 @@
       <link rel="stylesheet" href="css/navbar.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-			<link rel="stylesheet" href="css/hesap.css">
+			<link rel="stylesheet" href="css/hesap.css">			
+      <link rel="stylesheet" href="css/profilKart.css">
 				
 			<style>body {background: #ecefef;}</style>
     </head>
@@ -50,25 +51,48 @@
     </div>
 </nav>
 
-<section class="main">
+<div class="profileRealMainCard">
+  <div class="profileMainCard">
+      <!-- Profile widget -->
+      <div class="profileCard">
+          <div class="px-4 pt-0 pb-4 cover">
+              <div class="media align-items-end profile-head">
+                  <div class="profile mr-3">
+                      <img src="images/profile/profile1.jpg" alt="..." class="rounded mb-2 img-thumbnail"/>
+                      <a href="#" class="btn btn-outline-dark btn-sm btn-block"><b>Profili düzenle</b></a>
+                  </div>
 
-  <div class="mSaticiEkrani">
-          <header>
-            <nav class="saticiEkrani">
-              <div class="container-fluid">
-                <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation"></button>
-            <div class="saticiEkraniImg">
-            <div class="mask">
-              <div class="d-flex justify-content-center align-items-center h-100">
-                <div class="text-white">
-                  <h1 class="mb-3">Satıcı mısınız?</h1>
-                  <a data-mdb-ripple-init class="btn btn-outline-light btn-lg" href="satici.html" role="button">Satıcı panelini görüntüle</a>
-                </div>
+                  <div class="media-body mb-5 text-white">
+                      <h4 class="mt-0 mb-0">Yakup Yolcu</h4>
+                      <p class="small mb-4">Sakarya</p>
+                  </div>
+                  
+
               </div>
+          </div>
+
+          <div class="backgroundProfile p-4 d-flex justify-content-end">
+            <div class="profileButtons">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                <button data-mdb-collapse-init class="buttonProfile btn-dark mb-0"><i class="fas fa-user mr-1"></i>Yayındaki İlan: <b>2</b></button>
+                </li>
+                <li class="list-inline-item">
+                <button data-mdb-collapse-init class="buttonProfile btn-dark mb-0"><i class="fas fa-user mr-1"></i>İlan Mesajları: <b>7</b></button>
+                </li>
+                <li class="list-inline-item">
+                 <button data-mdb-collapse-init class="buttonProfile btn-dark mb-0"><i class="fas fa-user mr-1"></i>Favori Ürünler: <b>17</b></button>
+                </li>
+              </ul>
             </div>
           </div>
-        </header>
+       
+      </div>
   </div>
+</div>
+
+
+<section class="main">
 
   <section class="main-course">
           <div class="course-box">
@@ -94,6 +118,24 @@
             </div>
           </div>
   </section>
+
+  <div class="mSaticiEkrani">
+    <header>
+      <nav class="saticiEkrani">
+        <div class="container-fluid">
+          <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation"></button>
+      <div class="saticiEkraniImg">
+      <div class="mask">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">Satıcı mısınız?</h1>
+            <a data-mdb-ripple-init class="btn btn-outline-light btn-lg" href="satici.html" role="button">Satıcı panelini görüntüle</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  </div>
 
 </section>
 
