@@ -3,6 +3,10 @@ a, a:hover {
     color: inherit;
 }
 
+.addToCartBtn{
+    border: none;
+}
+
 .single-product {
   box-shadow: 0 2px 3px rgba(0,0,0,0.2);
   margin-bottom: 20px;
@@ -71,27 +75,6 @@ a, a:hover {
 
 .section-products .single-product:hover .part-1::before {
 		transform: scale(1.2,1.2) rotate(5deg);
-}
-
-.section-products #product-1 .part-1::before {
-    background: url("images/yuzyetmisdort.jpg") no-repeat center;
-    background-size: cover;
-		transition: all 0.3s;
-}
-
-.section-products #product-2 .part-1::before {
-    background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center;
-    background-size: cover;
-}
-
-.section-products #product-3 .part-1::before {
-    background: url("https://i.ibb.co/L8Nrb7p/1.jpg") no-repeat center;
-    background-size: cover;
-}
-
-.section-products #product-4 .part-1::before {
-    background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center;
-    background-size: cover;
 }
 
 .section-products .single-product .part-1 .discount,
@@ -172,4 +155,25 @@ a, a:hover {
     height: 1px;
     background-color: #444444;
     transform: translateY(-50%);
+}
+
+.section-products #product-card-38 .part-1::before {
+    background: url("images/yuzyetmisdort.jpg") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-2 .part-1::before {
+    background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-3 .part-1::before {
+    background: url("https://i.ibb.co/L8Nrb7p/1.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-4 .part-1::before {
+    background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center;
+    background-size: cover;
 }

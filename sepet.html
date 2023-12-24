@@ -7,6 +7,14 @@
       <link rel="stylesheet" href="css/navbar.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
+      <link rel="stylesheet" href="css/sepet.css">
+      <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+      <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css'>
+      <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'>
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'>
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+      
+
       <script src="js/mainScript.js"></script>
 				
 			<style>body {background: #ecefef;}</style>
@@ -50,40 +58,108 @@
     </div>
 </nav>
 
-<!-- Sepetteki ürünleri gösteren alan -->
-<div class="col-sm-2" id="cartItems">
-  <!-- Sepet ürünleri burada gösterilecek -->
+<style>
+  /* Stil dosyanızı burada ekleyebilirsiniz */
+  .cart-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  .cart-item img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+  }
+
+  .cart-item-details {
+    flex-grow: 1;
+  }
+
+  .cart-item button {
+    margin-left: auto;
+  }
+</style>
+</head>
+<body>
+<h1>Sepetim</h1>
+
+<!-- Sepetim -->
+<div id="cart">
+  <h1>Sepetim</h1>
+  <ul id="cartItems"></ul>
+  <button onclick="clearCart()">Sepeti Temizle</button>
+  <button onclick="updateCart()">Sepeti Güncelle</button>
 </div>
 
 <script>
   // localStorage'taki sepet verilerini al
   const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 
-  // Sepetteki ürünleri gösteren bir alan seç
-  const cartItemsContainer = document.getElementById('cartItems');
-
   // Sepetteki ürünleri gösteren bir liste oluştur
+  const cartList = document.getElementById('cartItems');
   cartItems.forEach(item => {
-    const productDiv = document.createElement('div');
-    productDiv.classList.add('thumb-wrapper');
-
-    // Ürün bilgilerini ekleyen içerik
-    productDiv.innerHTML = `
-      <div class="img-box">
-        <img src="/examples/images/products/ipad.jpg" class="img-fluid" alt="">
-      </div>
-      <div class="thumb-content">
-        <h4>${item.name}</h4>
-        <p class="item-price">${item.price}</p>
-        <p class="item-quantity">Adet: ${item.quantity}</p>
+    const listItem = document.createElement('li');
+    listItem.innerHTML = `
+      <div class="cart-item">
+        <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+        <div class="cart-item-details">
+          <span class="cart-item-name">${item.name}</span>
+          <span class="cart-item-price">${item.price.toFixed(2)} $</span>
+          <div class="cart-item-quantity">
+            Adet: <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity('${item.id}', this.value)">
+          </div>
+        </div>
+        <button class="remove-from-cart-btn" onclick="removeFromCart('${item.id}')">Sepetten Çıkar</button>
       </div>
     `;
-
-    // Liste elemanını ana container'a ekle
-    cartItemsContainer.appendChild(productDiv);
+    cartList.appendChild(listItem);
   });
-</script>
 
+  function clearCart() {
+    localStorage.removeItem('cart');
+    alert('Sepet temizlendi!');
+    location.reload(); // Sayfayı yenile
+  }
+
+  function updateCart() {
+    // Sepeti güncelleme işlemlerini burada gerçekleştir
+    // Örneğin, fiyatları topla veya miktarları güncelle
+    // Daha sonra güncellenmiş sepet verilerini localStorage'a kaydet
+
+    // Örnek: Her ürünün fiyatını 2 katına çıkaralım
+    cartItems.forEach(item => {
+      item.price *= 2;
+    });
+
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    alert('Sepet güncellendi!');
+    location.reload(); // Sayfayı yenile
+  }
+
+  function removeFromCart(itemId) {
+    const updatedCartItems = cartItems.filter(item => item.id !== itemId);
+    localStorage.setItem('cart', JSON.stringify(updatedCartItems));
+    alert('Ürün sepetten çıkarıldı!');
+    location.reload(); // Sayfayı yenile
+  }
+
+  function updateQuantity(itemId, newQuantity) {
+    const updatedCartItems = cartItems.map(item => {
+      if (item.id === itemId) {
+        item.quantity = parseInt(newQuantity, 10);
+      }
+      return item;
+    });
+
+    localStorage.setItem('cart', JSON.stringify(updatedCartItems));
+    alert('Adet güncellendi!');
+    location.reload(); // Sayfayı yenile
+  }
+</script>
 
 </body>
 </html>
