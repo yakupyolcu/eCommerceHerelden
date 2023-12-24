@@ -1,0 +1,89 @@
+<html lang="tr">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Hesabım - Herelden</title>
+      <link rel="stylesheet" href="css/navbar.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+      <script src="js/mainScript.js"></script>
+				
+			<style>body {background: #ecefef;}</style>
+    </head>
+<body>
+
+  <nav class="mainNavbar">
+    <div class="menu">
+        <!-- Logo ve Arama Kısmı -->
+        <div class="logoVeArama">
+            <div class="logo"><a href="index.html"><img class="logo" src="images/hereldenLogo.png" alt="logoHerelden"></a></div>
+            <div class="maddeArama">
+                <input class="textbox" type="text" placeholder="Kelime, ilan ismi ile ara">
+            </div>
+            <div class="maddeAramaDet"><a href="#">Filtrele</a></div>
+        </div>
+        <!-- Options line -->
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <img class="optionsLine" src="images/optionsLine2.png" alt="optionsLineIcon">
+        </label>
+        <!-- Tablet ve Telefon Kısmı için seçenekler -->
+        <ul class="secenekler">
+            <li class="madde"><a href="market.html">Market</a></li>
+            <li class="madde"><a href="el2.html">2.El</a></li>
+            <li class="madde"><a href="#fav">Favorilerim</a></li>
+        </ul>
+        <!-- Desktop için seçenekler -->
+        <ul class="secenekler2">
+            <li class="madde"><a href="market.html">Market</a></li>
+            <li class="madde"><a href="el2.html">2.El</a></li>
+            <li class="madde"><a href="#fav">Favorilerim</a></li>
+        </ul>
+        <!-- Butonlar -->
+        <div class="navbarBtn">
+            <div class="maddeButton"><a href="hesap.html">Hesabım</a></div>
+            <div class="maddeButtonSecondary"><a href="sepet.html">Sepetim</a></div>
+        </div>
+
+
+    </div>
+</nav>
+
+<!-- Sepetteki ürünleri gösteren alan -->
+<div class="col-sm-2" id="cartItems">
+  <!-- Sepet ürünleri burada gösterilecek -->
+</div>
+
+<script>
+  // localStorage'taki sepet verilerini al
+  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Sepetteki ürünleri gösteren bir alan seç
+  const cartItemsContainer = document.getElementById('cartItems');
+
+  // Sepetteki ürünleri gösteren bir liste oluştur
+  cartItems.forEach(item => {
+    const productDiv = document.createElement('div');
+    productDiv.classList.add('thumb-wrapper');
+
+    // Ürün bilgilerini ekleyen içerik
+    productDiv.innerHTML = `
+      <div class="img-box">
+        <img src="/examples/images/products/ipad.jpg" class="img-fluid" alt="">
+      </div>
+      <div class="thumb-content">
+        <h4>${item.name}</h4>
+        <p class="item-price">${item.price}</p>
+        <p class="item-quantity">Adet: ${item.quantity}</p>
+      </div>
+    `;
+
+    // Liste elemanını ana container'a ekle
+    cartItemsContainer.appendChild(productDiv);
+  });
+</script>
+
+
+</body>
+</html>

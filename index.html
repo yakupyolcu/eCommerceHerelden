@@ -20,6 +20,7 @@
 			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 			<script src="js/script.js"></script>
+			<script src="js/mainScript.js"></script>
       <script>
         $(document).ready(function(){
             $(".wish-icon i").click(function(){
@@ -62,7 +63,7 @@
         <!-- Butonlar -->
         <div class="navbarBtn">
             <div class="maddeButton"><a href="hesap.html">Hesabım</a></div>
-            <div class="maddeButtonSecondary"><a href="#">Sepetim</a></div>
+            <div class="maddeButtonSecondary"><a href="sepet.html">Sepetim</a></div>
         </div>
 
 
@@ -96,7 +97,7 @@
 				<div class="carousel-inner">
 				<div class="item carousel-item active">
 					<div class="row1">
-						<div class="col-sm-2">
+						<div class="col-sm-2" id="productDetails">
 								<div class="thumb-wrapper">
 									<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 									<div class="img-box">
@@ -114,7 +115,7 @@
 											</ul>
 										</div>
 										<p class="item-price"><strike>$400.00</strike> <b>$369.00</b></p>
-										<a href="#" class="btn btn-primary">Sepete Ekle</a>
+										<button href="#" class="btn btn-primary" onclick="addToCart()">Sepete Ekle</button>
 									</div>						
 								</div>
 						</div>
@@ -513,6 +514,35 @@
 	</div>
 </div>
 </div>
+<script>
+	function addToCart() {
+		// Sepete eklenecek ürün bilgilerini al
+		const productName = document.querySelector('#productDetails h4').textContent;
+		const productPrice = document.querySelector('#productDetails .item-price b').textContent;
+
+		// Ürün bilgilerini localStorage'tan al
+		let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+		// Ürün sepette var mı kontrol et
+		const existingItemIndex = cartItems.findIndex(item => item.name === productName);
+
+		if (existingItemIndex !== -1) {
+			// Eğer ürün sepette varsa, miktarını arttır
+			cartItems[existingItemIndex].quantity++;
+		} else {
+			// Eğer ürün sepette yoksa, yeni bir ürün olarak ekle
+			cartItems.push({ name: productName, price: productPrice, quantity: 1 });
+		}
+
+		// localStorage'taki sepet verilerini güncelle
+		localStorage.setItem('cart', JSON.stringify(cartItems));
+
+		// Kullanıcıyı bilgilendir
+		alert('Ürün sepete eklendi!');
+	}
+</script>
+
+
 
 <div class="widgetAllProducts">
 			<h2>2. El <b> İlan Vitrini;</b></h2>
