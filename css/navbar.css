@@ -4,6 +4,7 @@
   margin: 0;
   
 }
+
 h2 {
 	color: #000;
 	font-size: 26px;
@@ -29,6 +30,23 @@ ul{
   width: 100%;
   z-index: 1907;
 }
+
+.saatMain{
+  position: fixed;
+  float: left;
+  background-color: #1b1b1b;
+  padding: 5px 10px 10px 5px;
+  border-radius: 0 0 10px 0;
+}
+
+.saat{
+  color: #ff9900;
+  font-size: 15px;
+  margin-top: 60px;
+  margin-left: 5px;
+  z-index: 2000;
+}
+
 .madde a{
   color: white;
   text-decoration: none;

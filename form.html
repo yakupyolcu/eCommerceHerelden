@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
       <link rel="stylesheet" href="css/profilKart.css">
-      <link rel="stylesheet" href="css/iletisimHerelden.css">
+      <link rel="stylesheet" href="css/form.css">
 				
 			<style>body {background: #ecefef;}</style>
     </head>
@@ -50,6 +50,25 @@
 
     </div>
 </nav>
+
+<div class="saatMain">
+  <div id="turkiyeSaat" class="saat"></div>
+  <script>
+    function updateTurkiyeSaat() {
+        var turkiyeSaat = new Date().toLocaleString('tr-TR', {
+            timeZone: 'Europe/Istanbul',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hour12: false
+        });
+        document.getElementById('turkiyeSaat').innerText = turkiyeSaat;
+    }
+  
+    setInterval(updateTurkiyeSaat, 1000);
+    updateTurkiyeSaat();  // Sayfa yüklendiğinde saat bilgisini göstermek için
+  </script>
+  </div>
 
 <div class="profileRealMainCard">
   <div class="profileMainCard">
@@ -104,27 +123,27 @@
         }
       </script>
 
-  <div id="contactForm" class="form-container">
-    <form>
+<div id="contactForm" class="form-container">
+  <form>
       <label for="fname" class="labelTitle">Ad Soyad</label>
       <input type="text" id="fname" name="fname" placeholder="Adınız Soyadınız">
 
-      <label for="email" class="labelTitle">İşletme Adı</label>
-      <input type="email" id="email" name="email" placeholder="Formu Göndereceğiniz İşletmenin Adı">
+      <label for="isletmeAdi" class="labelTitle">İşletme Adı</label>
+      <input type="text" id="isletmeAdi" name="isletmeAdi" placeholder="İşletme Adı">
 
-      <label for="email" class="labelTitle">E-Posta</label>
-      <input type="email" id="email" name="email" placeholder="E-Posta Adresiniz">
+      <label for="emailForm" class="labelTitle">E-Posta</label>
+      <input type="email" id="emailForm" name="emailForm" placeholder="E-Posta Adresiniz">
 
-      <label for="message" class="labelTitle">Öneri, İleti veya Şikayet</label>
-      <textarea id="message" name="message" placeholder="Öneri, ileti veya şikayetlerini bu alana yazabilirsiniz" style="height:200px"></textarea>
+      <label for="messageForm" class="labelTitle">Öneri, İleti veya Şikayet</label>
+      <textarea id="messageForm" name="messageForm" placeholder="Öneri, ileti veya şikayetlerini bu alana yazabilirsiniz" style="height:200px"></textarea>
 
       <button type="button" class="btn-outline-light" onclick="submitContactForm()">Gönder</button>
-    </form>
-  
-  </div>
+  </form>
+</div>
 </div>
 
-<script src="js/iletisimHerelden.js"></script>
+
+<script src="js/form.js"></script>
 
   </body>
   </html>

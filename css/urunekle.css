@@ -1,0 +1,35 @@
+.urunekle{
+  display: block;
+  padding: 30px 210px 0 210px;
+}
+
+.urun-ekle-form{
+width: 100%;
+padding: 15px ;
+margin-top: 20px;
+background: #fb9700;
+border-radius: 10px;
+box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.labelTitle{
+  color: #1b1b1b!important;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.ekleButon {
+  height: 50px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.ekleButon:hover {
+  background: #1b1b1b;
+  color: #fb9700;
+  border-color: #fb9700;
+}

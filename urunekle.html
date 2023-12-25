@@ -8,13 +8,14 @@
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
 			<link rel="stylesheet" href="css/satici.css">
-      <link rel="stylesheet" href="css/saticiUrunler.css">
-      <link rel="stylesheet" href="css/formyanit.css">
       <link rel="stylesheet" href="css/saticiProfilKart.css">
+      <link rel="stylesheet" href="css/urunekle.css">
+
       <script src="js/form.js"></script>
 			<style>body {background: #111;}</style>
     </head>
 <body>
+
 
   <nav class="mainNavbar">
     <div class="menu">
@@ -99,105 +100,28 @@
   </div>
 </div>
 
-<section class="main-course">
-  <h2>Ürün Yönetimi</h2>
-  <div class="course-box">
-    <div class="course">
-      <button class="btn btn-dark" id="urunEkleButton" onclick="openUrunEklePage()"><a href="urunekle.html" class="urunA">
-        <h3>Ürün Ekle</h3>
-        <p>Ürününüzün adı, kategori, açıklama, fiyat, stok miktarı gibi temel bilgileri buradan ekleyebilirsiniz.</p>
-        <i class="fab fa-css3-alt css"></i></a>
-    </button>
 
-      <button class="btn btn-dark">
-        <h3>Ürün Düzenle veya Sil</h3>
-        <p>Mevcut ürünlerinizi güncelleme imkanı, fiyat değişiklikleri, açıklama güncellemeleri gibi değişiklikleri yapabilirve istediğiniz ürünleri panel üzerinden kaldırabilirsiniz..</p>
-        <i class="fab fa-js-square js"></i>
-    </button>
-    
-    </div>
-  </div>
-</section>
 
-<section class="comment-container">
-    <h2>Müşteri Önerileri</h2>
-        <div class="commentStatus">
-            <div class="satici-bilgileri" id="saticiBilgileri">
-                <!-- Satıcı bilgileri burada gösterilecek -->
-            </div>
-            <button id="silButton" class="silButton btn-dark" onclick="silOneriler()">Önerileri Sil</button>
-      </div>
-  </section>
-  <script src="js/formyanit.js"></script>
 
-<section class="order-container">
-  <h2>Satış Geçmişi ve Sipariş Durumları</h2>
-<div class="orderStatus">
-  <!-- Sipariş Geçmişi -->
-  <section class="order-history">
-      <h3>Sipariş Geçmişi</h3>
-    <div class="orderList">
-      <ul>
-          <li>
-              <span>Sipariş No: 123456</span>
-              <span>Tarih: 2023-01-01</span>
-              <span>Durum: Kargoya Verildi</span>
-          </li>
-          <li>
-            <span>Sipariş No: 123456</span>
-            <span>Tarih: 2023-01-01</span>
-            <span>Durum: Kargoya Verildi</span>
-          </li>
-          <li>
-          <span>Sipariş No: 123456</span>
-          <span>Tarih: 2023-01-01</span>
-          <span>Durum: Kargoya Verildi</span>
-          </li>
-          <li>
-        <span>Sipariş No: 123456</span>
-        <span>Tarih: 2023-01-01</span>
-        <span>Durum: Kargoya Verildi</span>
-          </li>
-          <li>
-          <span>Sipariş No: 123456</span>
-          <span>Tarih: 2023-01-01</span>
-          <span>Durum: Kargoya Verildi</span>
-          </li>
-          <li>
-            <span>Sipariş No: 123456</span>
-            <span>Tarih: 2023-01-01</span>
-            <span>Durum: Kargoya Verildi</span>
-          </li>
-          <!-- Diğer siparişler buraya eklenebilir -->
-      </ul>
-    </div>
-  </section>
+<section class="urunekle">
+  <h2>Ürün Ekle</h2>
+    <div class="urun-ekle-form">
+      <form id="urunEkleForm">
+          <label for="urunAdi" class="labelTitle">Ürün Adı:</label>
+          <input type="text" id="urunAdi" name="urunAdi" required>
 
-  <!-- Sipariş Durumları -->
-  <section class="order-status">
-      <h3>Sipariş Durumları</h3>
-      <form>
-          <label for="orderNumber">Sipariş Numarası:</label>
-          <input type="text" id="orderNumber" name="orderNumber" required>
-          <select name="status" id="status" required>
-              <option value="Hazırlanıyor">Hazırlanıyor</option>
-              <option value="Kargoya Verildi">Kargoya Verildi</option>
-              <option value="Teslim Edildi">Teslim Edildi</option>
-          </select>
-          <button class="btn btn-dark" type="submit">Durumu Güncelle</button>
+          <label for="urunFiyati" class="labelTitle">Ürün Fiyatı:</label>
+          <input type="number" id="urunFiyati" name="urunFiyati" required>
+
+          <label for="urunResmi" class="labelTitle">Ürün Resmi (URL):</label>
+          <input type="url" id="urunResmi" name="urunResmi" required>
+
+          <button type="button" onclick="urunEkle()" class="ekleButon btn-dark">Ürün Ekle</button>
       </form>
-  </section>
-</div>
-</section>
-
-
-<section class="saticiUrunler">
-  <h2>Stoktaki Ürünler</h2>
-  <div class="mainPanelSatici">
-    <div id="eklenenUrunler" class="row">
-        <!-- Eklenen ürünler burada gösterilecek -->
+      <div id="bilgiMesaji"></div>
     </div>
 </section>
+
 <script src="js/urunekle.js"></script>
 
 </body>

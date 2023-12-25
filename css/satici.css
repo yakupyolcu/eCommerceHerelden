@@ -4,12 +4,12 @@ h2 {
 }
 .main-course{
   display: block;
-  padding: 90px 210px 0 210px;
+  padding: 30px 210px 0 210px;
 }
 .course-box{
   width: 100%;
   height: 250px;
-  padding: 10px 10px 30px 10px;
+  padding: 10px 10px 50px 10px;
   margin-top: 20px;
   background: #fb9700;
   border-radius: 10px;
@@ -30,6 +30,15 @@ h2 {
 }
 .course-box .course{
   display: flex;
+}
+
+.urunA{
+  color: #000;
+}
+
+.urunA:hover{
+  color: #fb9700;
+  text-decoration: none;
 }
 
 .course .btn{
@@ -84,6 +93,76 @@ h2 {
 .orderList{
   height: 220px;
   overflow-y: scroll;
+}
+
+.comment-container {
+  padding: 30px 210px 0 210px;
+}
+
+.commentStatus {
+  display: block;
+  width: 100%;
+  padding: 10px 10px 30px 10px;
+  margin-top: 20px;
+  background: #fb9700;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.satici-bilgileri {
+  margin-top: 8px;
+  width: 100%;
+  padding: 10px 10px 30px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.satici-bilgileri h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.satici-bilgileri p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.satici-bilgileri strong {
+  font-weight: bold;
+}
+
+.silButton {
+  height: 50px;
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.silButton:hover {
+  background: #1b1b1b;
+  color: #fb9700;
+  border-color: #fb9700;
+}
+
+#saticiBilgileri {
+  display: flex;
+  flex-direction: column;
+}
+
+#saticiBilgileri p {
+  margin: 5px 0;
+}
+
+#saticiBilgileri p strong {
+  margin-right: 5px;
+}
+
+#saticiBilgileri p:last-child {
+  word-wrap: break-word;
+  /* Eğer öneri çok uzunsa satırı kırmak için */
 }
 
 ul {

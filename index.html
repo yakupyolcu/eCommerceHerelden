@@ -71,6 +71,25 @@
     </div>
 </nav>
 
+<div class="saatMain">
+	<div id="turkiyeSaat" class="saat"></div>
+	<script>
+		function updateTurkiyeSaat() {
+				var turkiyeSaat = new Date().toLocaleString('tr-TR', {
+						timeZone: 'Europe/Istanbul',
+						hour: 'numeric',
+						minute: 'numeric',
+						second: 'numeric',
+						hour12: false
+				});
+				document.getElementById('turkiyeSaat').innerText = turkiyeSaat;
+		}
+	
+		setInterval(updateTurkiyeSaat, 1000);
+		updateTurkiyeSaat();  // Sayfa yüklendiğinde saat bilgisini göstermek için
+	</script>
+</div>
+
 <div class="bannerImageWrapper">
     <div class="bannerImage">
       <div class="bannerAll">
