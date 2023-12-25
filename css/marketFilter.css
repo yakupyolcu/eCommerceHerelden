@@ -145,12 +145,18 @@ display: block;
 }
 
 /* Mobile menu */
+.mainPanelMarket{
+  padding-top: 90px;
+}
 .filterMarket{
   display: none;
 }
 
 /* Tablet menu */
 @media all and (min-width: 768px) {
+  .mainPanelMarket{
+    padding-top: 90px;
+  }
   .filterMarket{
     display: none;
   }

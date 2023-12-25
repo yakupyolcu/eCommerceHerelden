@@ -157,23 +157,101 @@ a, a:hover {
     transform: translateY(-50%);
 }
 
-.section-products #product-card-38 .part-1::before {
-    background: url("images/yuzyetmisdort.jpg") no-repeat center;
+.section-products #product-card-19 .part-1::before {
+    background: url("market/1.jpg") no-repeat center;
     background-size: cover;
 		transition: all 0.3s;
 }
 
-.section-products #product-2 .part-1::before {
-    background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center;
+.section-products #product-card-20 .part-1::before {
+    background: url("market/2.jpg") no-repeat center;
     background-size: cover;
+		transition: all 0.3s;
 }
 
-.section-products #product-3 .part-1::before {
-    background: url("https://i.ibb.co/L8Nrb7p/1.jpg") no-repeat center;
+.section-products #product-card-21 .part-1::before {
+    background: url("market/3.jpg") no-repeat center;
     background-size: cover;
+		transition: all 0.3s;
+}
+.section-products #product-card-22 .part-1::before {
+    background: url("market/4.jpg") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
 }
 
-.section-products #product-4 .part-1::before {
-    background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center;
+.section-products #product-card-23 .part-1::before {
+    background: url("market/5.jpg") no-repeat center;
     background-size: cover;
+		transition: all 0.3s;
 }
+
+.section-products #product-card-24 .part-1::before {
+    background: url("market/6.jpg") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-card-25 .part-1::before {
+    background: url("market/7.jpg") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-card-26 .part-1::before {
+    background: url("market/8.jpg") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-card-27 .part-1::before {
+    background: url("market/9.jpg") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-card-28 .part-1::before {
+    background: url("market/10.jpg") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-card-29 .part-1::before {
+    background: url("market/11.jpg") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-card-30 .part-1::before {
+    background: url("market/12.jpg") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-card-31 .part-1::before {
+    background: url("market/13.jpg") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-card-32 .part-1::before {
+    background: url("market/14.jpg") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-card-33 .part-1::before {
+    background: url("market/15.jpg") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-card-34 .part-1::before {
+    background: url("market/16.jpg") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+
+
+
