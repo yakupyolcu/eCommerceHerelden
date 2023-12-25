@@ -1,6 +1,14 @@
 .container-xxl{
 	display: block;
-	margin-top: 20px;
+	margin-top: 80px;
+}
+
+.carousel{
+	margin-top: 15px;
+}
+
+.favButton{
+	border: none;
 }
 
 .carousel .item {

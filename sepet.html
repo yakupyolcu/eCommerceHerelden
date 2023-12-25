@@ -40,13 +40,13 @@
         <ul class="secenekler">
             <li class="madde"><a href="market.html">Market</a></li>
             <li class="madde"><a href="el2.html">2.El</a></li>
-            <li class="madde"><a href="#fav">Favorilerim</a></li>
+            <li class="madde"><a href="favori.html">Favorilerim</a></li>
         </ul>
         <!-- Desktop için seçenekler -->
         <ul class="secenekler2">
             <li class="madde"><a href="market.html">Market</a></li>
             <li class="madde"><a href="el2.html">2.El</a></li>
-            <li class="madde"><a href="#fav">Favorilerim</a></li>
+            <li class="madde"><a href="favori.html">Favorilerim</a></li>
         </ul>
         <!-- Butonlar -->
         <div class="navbarBtn">
@@ -107,11 +107,11 @@
 <h1>Sepetim</h1>
 
 <!-- Sepetim -->
-<div id="cart">
-  <h1>Sepetim</h1>
+<div class="mainCart" id="cart">
+  <h2>Sepetim</h2>
   <ul id="cartItems"></ul>
-  <button onclick="clearCart()">Sepeti Temizle</button>
-  <button onclick="updateCart()">Sepeti Güncelle</button>
+  <button class="btn btn-dark" onclick="clearCart()">Sepeti Temizle</button>
+  <button class="btn btn-dark" onclick="updateCart()">Sepeti Güncelle</button>
 </div>
 
 <script>
@@ -123,6 +123,7 @@
   cartItems.forEach(item => {
     const listItem = document.createElement('li');
     listItem.innerHTML = `
+    <div class="mainCartInner">
       <div class="cart-item">
         <img src="${item.image}" alt="${item.name}" class="cart-item-image">
         <div class="cart-item-details">
@@ -132,8 +133,9 @@
             Adet: <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity('${item.id}', this.value)">
           </div>
         </div>
-        <button class="remove-from-cart-btn" onclick="removeFromCart('${item.id}')">Sepetten Çıkar</button>
+        <button class="remove-from-cart-btn btn-dark" onclick="removeFromCart('${item.id}')">Sepetten Çıkar</button>
       </div>
+    </div>  
     `;
     cartList.appendChild(listItem);
   });

@@ -1,4 +1,10 @@
 /* Courses */
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 h2 {
   color: #fb9700!important;
 }
@@ -30,15 +36,6 @@ h2 {
 }
 .course-box .course{
   display: flex;
-}
-
-.urunA{
-  color: #000;
-}
-
-.urunA:hover{
-  color: #fb9700;
-  text-decoration: none;
 }
 
 .course .btn{

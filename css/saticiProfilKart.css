@@ -6,9 +6,9 @@
   z-index: 1907;
 }
 
-
 .cover {
-  background-color: #000;
+  
+  background-color: #1b1b1b;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -37,23 +37,6 @@
   width: 130px;
 }
 
-.profileButtons{
-  z-index: 1;
-}
-
-.buttonProfile{
-  height: 35px;
-  padding: 0 10px;
-  border-radius: 10px;
-  background: #fb9700;
-  color: #1b1b1b;
-  border-color: #1b1b1b;
-  font-weight: 500;
-  font-size: 15;
-}
-
-.buttonProfile:hover{
-  background: #1b1b1b;
-  color: #fb9700;
-  border-color: #fb9700;
+.btn .btn-outline-light{
+  color:#000
 }

@@ -1,15 +1,31 @@
+.mainCart{
+  padding: 0 210px;
+  margin-top: 20px;
+}
+
+
+
+
 .cart-item {
+  background-color: #fff;
+  width: 100%;
   border: 1px solid #ddd;
   padding: 10px;
+  margin-top: 15px;
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
 }
 
-.cart-item button {
-  background-color: #ff6262;
+.remove-from-cart-btn {
+  background-color: #ff9900;
   color: #fff;
   border: none;
+  border-radius: 10px;
   padding: 5px 10px;
   cursor: pointer;
+}
+
+.remove-from-cart-btn:hover {
+  background-color: #1b1b1b;
 }
