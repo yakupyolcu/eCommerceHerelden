@@ -7,13 +7,12 @@
       <link rel="stylesheet" href="css/navbar.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-			<link rel="stylesheet" href="css/hesap.css">			
       <link rel="stylesheet" href="css/profilKart.css">
+      <link rel="stylesheet" href="css/iletisimHerelden.css">
 				
 			<style>body {background: #ecefef;}</style>
     </head>
 <body>
-
 
   <nav class="mainNavbar">
     <div class="menu">
@@ -92,60 +91,40 @@
   </div>
 </div>
 
-<section class="main">
 
+<div class="formMain">
+
+      <!-- Hesabım sayfasına geri dön -->
+        <button class="geriDonButton btn-dark" onclick="goBack()">< Hesabım'a dön</button>
+
+      <script>
+        function goBack() {
+          // Belirli bir sayfaya yönlendirme yap
+          window.location.href = 'hesap.html';
+        }
+      </script>
+
+  <div id="contactForm" class="form-container">
+    <form>
+      <label for="fname" class="labelTitle">Ad Soyad</label>
+      <input type="text" id="fname" name="fname" placeholder="Adınız Soyadınız">
+
+      <label for="email" class="labelTitle">İşletme Adı</label>
+      <input type="email" id="email" name="email" placeholder="Formu Göndereceğiniz İşletmenin Adı">
+
+      <label for="email" class="labelTitle">E-Posta</label>
+      <input type="email" id="email" name="email" placeholder="E-Posta Adresiniz">
+
+      <label for="message" class="labelTitle">Öneri, İleti veya Şikayet</label>
+      <textarea id="message" name="message" placeholder="Öneri, ileti veya şikayetlerini bu alana yazabilirsiniz" style="height:200px"></textarea>
+
+      <button type="button" class="btn-outline-light" onclick="submitContactForm()">Gönder</button>
+    </form>
   
-
-  <section class="main-course">
-          <div class="course-box">
-            <div class="course" id="courseID">
-              <div class="box">
-                <h3>Siparişlerim</h3>
-                <p>Bir siparişi izleyin, iade edin, iptal edin, faturayı indirin veya tekrar satın alın.</p>
-                <button data-mdb-collapse-init class="btn btn-outline-light btn-lg">Görüntüle</button>
-                <i class="fab fa-html5 html"></i>
-              </div>
-              <div class="box">
-                <h3>Bize ulaşın</h3>
-                <p>Self servis seçeneklerine, yardım makalelerine göz atın veya bize ulaşın.</p>
-                <a href="form.html"><button data-mdb-collapse-init class="btn btn-outline-light btn-lg" id="showFormButton" onclick="showForm()">Görüntüle</button></a>
-                <i class="fab fa-css3-alt css"></i>
-              </div>
-
-              
-
-              <div class="box">
-                <h3>Güvenlik ve Ödeme</h3>
-                <p>Parola, e-posta ve cep telefonu numarasını yönetin. Ödeme yöntemlerini yönetin veya ekleyin.</p>
-                <button data-mdb-collapse-init class="btn btn-outline-light btn-lg">Görüntüle</button>
-                <i class="fab fa-js-square js"></i>
-              </div>
-            </div>
-          </div>
-
-  </section>
-
-
-
-  <div class="mSaticiEkrani">
-    <header>
-      <nav class="saticiEkrani">
-        <div class="container-fluid">
-          <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation"></button>
-      <div class="saticiEkraniImg">
-      <div class="mask">
-        <div class="d-flex justify-content-center align-items-center h-100">
-          <div class="text-white">
-            <h1 class="mb-3">Satıcı mısınız?</h1>
-            <a data-mdb-ripple-init class="btn btn-outline-light btn-lg" href="satici.html" role="button">Satıcı panelini görüntüle</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
   </div>
+</div>
 
-</section>
+<script src="js/iletisimHerelden.js"></script>
 
   </body>
   </html>

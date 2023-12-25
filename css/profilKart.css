@@ -2,6 +2,11 @@
   transform: translateY(5rem)
 }
 
+.blur-container {
+  z-index: 1907;
+}
+
+
 .cover {
   background-color: #000;
   background-size: cover;
@@ -32,7 +37,7 @@
 }
 
 .profileButtons{
-  z-index: 1907;
+  z-index: 1;
 }
 
 .buttonProfile{

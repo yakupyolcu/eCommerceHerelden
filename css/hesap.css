@@ -3,6 +3,11 @@
   margin-top: -12px;
   padding-right: 207px;
 }
+
+.blur-form {
+  filter: blur(5px);
+}
+
 /* Main Section */
 .main{
   position: relative;
