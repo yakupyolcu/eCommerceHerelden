@@ -1,25 +1,45 @@
-
-.mt-50{
-  margin-top: 50px;
-}
-.mb-50{
-  margin-bottom: 50px;
-}
-
-
-.bg-teal-400 { 
-  background-color: #26a69a;
+.favButton{
+z-index: 99;
+font-size: 22px;
+border: none;
+background-color: rgba(0,0,0,0.0);
 }
 
-.mainPanelEl2 a{
-  text-decoration: none !important;
+.list-inline .wish-icon {
+	cursor: pointer;
+	font-size: 16px;
+}
+.list-inline .wish-icon .fa {
+	color: #ff6161;
 }
 
-
-.fa {
-      color: #ffc000;
+.img-box img{
+  background-size: cover;
+  border-radius: 10px;
+  margin-right: 5px;
 }
 
+.productName{
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.media-body p{
+  padding-top: 5px;
+  font-size: 17px;
+}
+
+.text-location{
+  color: #1b1b1b;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.fa-star {
+	font-size: 12px;
+	color: #ffc000;
+  margin-right: 0;
+}
 
 /* Mobile menu */
   .filterEl2{

@@ -7,6 +7,8 @@
     <title>Hesabım - Herelden</title>
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/favori.css">
 				
 			<style>body {background: #ecefef;}</style>
     </head>
@@ -72,50 +74,82 @@
 
 
 <h1>Favori Ürünler</h1>
-<ul id="favoriteItems"></ul>
+<div class="favCart" id="fav">
+  <h2>Sepetim</h2>
+  <ul id="favItems"></ul>
+
+  
+  <button class="btn btn-dark" onclick="clearFav()">Temizle</button>
+  <button class="btn btn-dark" onclick="updateFav()">Güncelle</button>
+  
+</div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-  // localStorage'taki favori verilerini al
-  const favoriteItems = JSON.parse(localStorage.getItem('favorites')) || [];
-  const favoritesList = document.getElementById('favoriteItems');
+  // localStorage'taki sepet verilerini al
+  const favItems = JSON.parse(localStorage.getItem('fav')) || [];
 
-  if (favoriteItems.length > 0) {
-    favoriteItems.forEach(productId => {
-      // Favori ürün ID'sini kullanarak orijinal ürün bilgilerini al
-      const originalProduct = document.getElementById(productId);
-      const productName = originalProduct.querySelector('.productName').textContent;
-      const productPrice = parseFloat(originalProduct.querySelector('.productPrice').textContent.replace('$', ''));
-      const productImage = originalProduct.querySelector('.img-box img').src;
-
-      // Favori ürünleri gösteren bir liste oluştur
-      const listItem = document.createElement('li');
-      listItem.innerHTML = `
-        <div class="favorite-item">
-          <img src="${productImage}" alt="${productName}" class="favorite-item-image">
-          <div class="favorite-item-details">
-            <span class="favorite-item-name">${productName}</span>
-            <span class="favorite-item-price">${productPrice.toFixed(2)} $</span>
-          </div>
-          <button class="remove-from-favorites-btn" onclick="removeFromFavorites('${productId}')">Favorilerden Çıkar</button>
-        </div>
-      `;
-      favoritesList.appendChild(listItem);
-    });
-  } else {
+  // Favorilerdeki ürünleri gösteren bir liste oluştur
+  const favList = document.getElementById('favItems');
+  favItems.forEach(item => {
     const listItem = document.createElement('li');
-    listItem.textContent = 'Henüz favori ürün yok.';
-    favoritesList.appendChild(listItem);
-  }
-});
+    listItem.innerHTML = `
+    <div class="mainFacInner">
+      <div class="fav-item">
+        <img src="${item.image}" alt="${item.name}" class="fav-item-image">
+        <div class="fav-item-details">
+          <span class="fav-item-name">${item.name}</span>
+          <span class="fav-item-price">${item.price.toFixed(2)} ₺</span>
+          <div class="fav-item-quantity">
+            Adet: <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity('${item.id}', this.value)">
+          </div>
+        </div>
+        <button class="remove-from-fav-btn btn-dark" onclick="removeFromFav('${item.id}')">Favorilerden Çıkar</button>
+      </div>
+    </div>  
+    `;
+    favList.appendChild(listItem);
+  });
 
-function removeFromFavorites(productId) {
-  const favoriteItems = JSON.parse(localStorage.getItem('favorites')) || [];
-  const updatedFavoriteItems = favoriteItems.filter(item => item !== productId);
-  localStorage.setItem('favorites', JSON.stringify(updatedFavoriteItems));
-  alert('Ürün favorilerden çıkarıldı!');
-  location.reload(); // Sayfayı yenile
-}
+  function clearFav() {
+    localStorage.removeItem('fav');
+    alert('Favoriler temizlendi!');
+    location.reload(); // Sayfayı yenile
+  }
+
+  function updateFav() {
+    // Favorileri güncelleme işlemlerini burada gerçekleştir
+    // Örneğin, fiyatları topla veya miktarları güncelle
+    // Daha sonra güncellenmiş sepet verilerini localStorage'a kaydet
+
+    // Örnek: Her ürünün fiyatını 2 katına çıkaralım
+    favItems.forEach(item => {
+      item.price *= 2;
+    });
+
+    localStorage.setItem('fav', JSON.stringify(cartItems));
+    alert('Favoriler güncellendi!');
+    location.reload(); // Sayfayı yenile
+  }
+
+  function removeFromFav(itemId) {
+    const updatedFavItems = favItems.filter(item => item.id !== itemId);
+    localStorage.setItem('fav', JSON.stringify(updatedFavItems));
+    alert('Ürün favorilerden çıkarıldı!');
+    location.reload(); // Sayfayı yenile
+  }
+
+  function updateQuantity(itemId, newQuantity) {
+    const updatedCartItems = cartItems.map(item => {
+      if (item.id === itemId) {
+        item.quantity = parseInt(newQuantity, 10);
+      }
+      return item;
+    });
+
+    localStorage.setItem('fav', JSON.stringify(updatedFavItems));
+    alert('Adet güncellendi!');
+    location.reload(); // Sayfayı yenile
+  }
 </script>
 
 </body>
