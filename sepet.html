@@ -3,7 +3,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Hesabım - Herelden</title>
+      <title>Sepetim - Herelden</title>
       <link rel="stylesheet" href="css/navbar.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
       			
@@ -114,7 +114,7 @@
   <h2>Sepetim</h2>
   <ul id="cartItems"></ul>
   <button class="btn btn-dark" onclick="clearCart()">Sepeti Temizle</button>
-  <button class="btn btn-dark" onclick="updateCart()">Sepeti Güncelle</button>
+  <button class="btn btn-dark" onclick="updateCart()">Satın Al</button>
 </div>
 
 <script>
@@ -160,7 +160,7 @@
     });
 
     localStorage.setItem('cart', JSON.stringify(cartItems));
-    alert('Sepet güncellendi!');
+    alert('Satın alma işlemi tamamlandı!');
     location.reload(); // Sayfayı yenile
   }
 

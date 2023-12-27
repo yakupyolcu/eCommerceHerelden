@@ -22,7 +22,7 @@ function submitContactForm() {
   localStorage.setItem('saticiBilgileri', JSON.stringify(saticiBilgileri));
 
   // Kullanıcıyı bilgilendir
-  alert('Form gönderildi!');
+  alert('Mesajınızı aldık. Teşekkür ederiz!');
 
   // Sayfayı yenile
   location.reload();
